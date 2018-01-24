@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.orders {
+  list-style: none;
+}
+
+.order {
+  margin-top: 0.5em;
+}
+
+.order > span:first-child {
+  font-weight: bold;
+}
+
+.order > span:first-child:after {
+  content: ':';
+}

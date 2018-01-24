@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>>CRUDMEN - an app for CRUD testing with Mongo Express and Node</h1>
+
+  <ul class="orders">
+    <% for(var i=0; i<orders.length; i++) {%>
+      <li class="order">
+        <span>
+          <%= orders[i].a %>
+        </span>
+        <span>
+          <%= orders[i].b %>
+        </span>
+      </li>
+      <% } %>
+  </ul>
+
+  <h2>Add a record</h2>
+
+  <form action="/orders" method="POST">
+    <input type="text" placeholder="a" name="a">
+    <input type="text" placeholder="b" name="b">
+    <button type="submit">Add</button>
+  </form>
+
+  <!--script src="main.js"></script-->
+
+</body>
+
+</html>
