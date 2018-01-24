@@ -4,34 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>CRUDMEN</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <h1>>CRUDMEN - an app for CRUD testing with Mongo Express and Node</h1>
+  <div class="container">
+    <h1>CRUDMEN - an app for CRUD testing with Mongo Express and Node</h1>
 
-  <ul class="orders">
-    <% for(var i=0; i<orders.length; i++) {%>
-      <li class="order">
-        <span>
-          <%= orders[i].a %>
-        </span>
-        <span>
-          <%= orders[i].b %>
-        </span>
-      </li>
-      <% } %>
-  </ul>
+    <ul class="orders">
+      <% for(var i=0; i<orders.length; i++) {%>
+        <li class="order">
+          <span>
+            <%= orders[i].a %>
+          </span>
+          <span>
+            <%= orders[i].b %>
+          </span>
+        </li>
+        <% } %>
+    </ul>
 
-  <h2>Add a record</h2>
+    <h2>Add a record</h2>
 
-  <form action="/orders" method="POST">
-    <input type="text" placeholder="a" name="a">
-    <input type="text" placeholder="b" name="b">
-    <button type="submit">Add</button>
-  </form>
-
-  <!--script src="main.js"></script-->
+    <form action="/orders" method="POST" class="form-inline">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="a" name="a">&nbsp;
+        <input class="form-control" type="text" placeholder="b" name="b">&nbsp;
+      </div>
+      <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
 
 </body>
 
